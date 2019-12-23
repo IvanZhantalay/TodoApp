@@ -11,7 +11,7 @@ export default class Store {
         };
         this.events = new Observer();
         this.completedCount = 0;
-        this.loginChanged = false;
+      
     }
 
     setToken(token){
@@ -64,16 +64,10 @@ export default class Store {
 
 
     dispatch(actionType, payload){
-        this.loginChanged = false;
+     
         if(this.redusers[actionType]){
 
-            if(actionType=="login" && !this.state.userInfo.authorized)
-            {
-                this.loginChanged = true;
-            }else if(actionType=='logout'&& this.state.userInfo.authorized)
-            {
-                this.loginChanged = true;
-            }
+        
             this.state = this.redusers[actionType](payload, this.state);
 
         this.completedCount = 0;
