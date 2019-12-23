@@ -1,0 +1,28 @@
+.app_decor {
+    display: flex;
+    text-align: center;
+    min-width: 420px;
+    }
+
+
+.wrap_counter{
+flex-grow: 1;
+margin: 5px;
+}
+.wrap_counter small {
+    display: block;
+    font-size: 21px;
+    font-weight: 400;
+    color: #555555;
+    margin: 10px;
+}
+.digi{
+    line-height: 40px;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: none;
+    border: 2px solid #0774D9;
+    border-radius: 50%;
+   }
